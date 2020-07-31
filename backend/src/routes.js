@@ -13,7 +13,7 @@ const routes = express.Router();
 //pegando route params da req
 // const params = request.params;
 
-routes.post('/sessions', SessionController.create)
+routes.post("/sessions", SessionController.create);
 
 routes.get("/ongs", OngController.index);
 routes.post("/ongs", OngController.create);
