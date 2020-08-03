@@ -8,7 +8,7 @@ import "./styles.css";
 
 import logoImg from "../../assets/logo.svg";
 
-export default function profile() {
+export default function Profile() {
   const [incidents, setIncidents] = useState([]);
 
   const ongId = localStorage.getItem("ongId");
