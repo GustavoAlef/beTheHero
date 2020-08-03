@@ -11,7 +11,7 @@ module.exports = {
 
   async create(request, response) {
     //req body (usando desestruturacao)
-    const { name, email, whats, city, uf } = request.body;
+    const { name, email, whats, city, uf } = request.body; 
 
     const id = crypto.randomBytes(4).toString("HEX");
 
