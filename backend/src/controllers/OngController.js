@@ -1,4 +1,5 @@
 //conexao com o banco
+const generateUniqueId = require("../utils/generateUniqueId");
 const connection = require("../database/connection");
 const crypto = require("crypto");
 
@@ -11,9 +12,9 @@ module.exports = {
 
   async create(request, response) {
     //req body (usando desestruturacao)
-    const { name, email, whats, city, uf } = request.body; 
+    const { name, email, whats, city, uf } = request.body;
 
-    const id = crypto.randomBytes(4).toString("HEX");
+    const id = generateUniqueId();
 
     //inserindo dados
     await connection("ongs").insert({

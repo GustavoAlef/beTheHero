@@ -4,17 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js --unhandled-rejections=strict"
+    "start": "nodemon src/server.js --unhandled-rejections=strict",
+    "test": "cross-env NODE_ENV=test jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "jest": "^26.2.2",
+    "supertest": "^4.0.2"
+
   },
   "dependencies": {
     "celebrate": "^12.1.2",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
     "express": "^4.17.1",
     "joi": "^17.1.1",
     "knex": "^0.21.2",
